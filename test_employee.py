@@ -1,10 +1,17 @@
-from employee import employee_details
+from product import format_product_info
 
-def test_employee_details():
+def test_format_product_info():
+    product_id = 101
+    name = "Laptop"
+    quantity = 5
+    price = 799.99
+
     expected_output = (
-        "Employee Name:Alice\n"
-        "Employee ID:E1001\n"
-        "Department:IT\n"
-        "Salary:55000"
+        "Product Information:\n"
+        "ID: 101\n"
+        "Name: Laptop\n"
+        "Quantity: 5\n"
+        "Price: $799.99"
     )
-    assert employee_details("Alice", "E1001", "IT", 55000) == expected_output
+
+    assert format_product_info(product_id, name, quantity, price) == expected_output
