@@ -1,27 +1,15 @@
-def format_product_info(product_id, name, quantity, price):
-
-
-
-   
-
-    return (
-
-        f"Product Information:\n"
-
-        f"ID: {product_id}\n"
-
-        f"Name: {name}\n"
-
-        f"Quantity: {quantity}\n"
-
-        f"Price: ${price:.2f}"
-
+def employee_details(name,emp_id,department,salary):
+    result = (
+        f"Employee_Name:{name}\n"
+        f"Employee_ID:{emp_id}\n"
+        f"Department:{department}\n"
+        f"Salary:{salary}"
     )
-
-
-
-
+    return result
 
 if __name__ == "__main__":
-
-    print(format_product_info(101, "Laptop", 5, 799.99))
+    name="Alice"
+    emp_id="E1001"
+    department="IT"
+    salary=55000
+    print(employee_details(name,emp_id,department,salary))
